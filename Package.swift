@@ -41,7 +41,7 @@ var package = Package(
             name: "Merge",
             dependencies: [
                 "Swallow",
-                .product(name: "SwallowMacrosClient", package: "Swallow-custom"),
+                .product(name: "SwallowMacrosClient", package: "Swallow"),
                 "SwiftDI",
             ],
             path: "Sources/Merge",
