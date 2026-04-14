@@ -29,7 +29,7 @@ var package = Package(
         .target(
             name: "SwiftDI",
             dependencies: [
-                "Swallow"
+                .product(name: "Swallow", package: "Swallow-custom")
             ],
             path: "Sources/SwiftDI",
             swiftSettings: [
@@ -40,7 +40,7 @@ var package = Package(
         .target(
             name: "Merge",
             dependencies: [
-                "Swallow",
+                .product(name: "Swallow", package: "Swallow-custom"),
                 .product(name: "SwallowMacrosClient", package: "Swallow-custom"),
                 "SwiftDI",
             ],
@@ -71,7 +71,7 @@ var package = Package(
             dependencies: [
                 "Merge",
                 "ShellScripting",
-                "Swallow",
+                .product(name: "Swallow", package: "Swallow-custom"),
             ],
             path: "Sources/CommandLineToolSupport",
             swiftSettings: [
